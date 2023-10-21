@@ -30,6 +30,7 @@ configurations {
 }
 
 dependencies {
+    implementation("mysql:mysql-connector-java:17.0.8")
     implementation("org.grails:grails-core")
     implementation("org.grails:grails-logging")
     implementation("org.grails:grails-plugin-databinding")
@@ -42,6 +43,7 @@ dependencies {
     implementation("org.grails.plugins:gsp")
     implementation("org.grails.plugins:hibernate5")
     implementation("org.grails.plugins:scaffolding")
+    implementation("org.grails.plugins:database-reverse-engineer:4.0.1")
     implementation("org.hibernate:hibernate-core:5.6.15.Final")
     implementation("org.springframework.boot:spring-boot-autoconfigure")
     implementation("org.springframework.boot:spring-boot-starter")

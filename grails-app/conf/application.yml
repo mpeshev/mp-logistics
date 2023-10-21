@@ -51,12 +51,13 @@ grails:
     reactor:
       events: false
 dataSource:
-  url: jdbc:h2:mem:devDb;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
-  driverClassName: org.h2.Driver
-  username: sa
-  password: ''
   pooled: true
   jmxExport: true
+  driverClassName: com.mysql.cj.jdbc.Driver
+  dialect: org.hibernate.dialect.MySQL8InnoDBDialect
+  username: "root"
+  password: "toor"
+  url: "jdbc:mysql://localhost:3306/mplogistics?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC"
 hibernate:
   hbm2ddl:
     auto: update
