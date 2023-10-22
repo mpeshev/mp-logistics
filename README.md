@@ -21,3 +21,8 @@
 
 - [https://grails-fields-plugin.github.io/grails-fields/latest/guide/index.html](https://grails-fields-plugin.github.io/grails-fields/latest/guide/index.html)
 
+
+## Project Notes
+
+`grails run-app` no longer exists in Grails 6, substituted with `./gradlew bootRun`
+
