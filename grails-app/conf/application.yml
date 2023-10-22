@@ -53,11 +53,11 @@ grails:
 dataSource:
   pooled: true
   jmxExport: true
-  driverClassName: com.mysql.cj.jdbc.Driver
+  driverClassName: com.mysql.jdbc.Driver
   dialect: org.hibernate.dialect.MySQL8InnoDBDialect
   username: "root"
   password: "toor"
-  url: "jdbc:mysql://localhost:3306/mplogistics?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC"
+  url: "jdbc:mysql://localhost:3306/mplogistics"
 hibernate:
   hbm2ddl:
     auto: update
