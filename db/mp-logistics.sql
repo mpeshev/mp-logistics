@@ -21,7 +21,7 @@ USE `mplogistics` ;
 -- Table `mplogistics`.`companies`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mplogistics`.`companies` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -30,7 +30,7 @@ ENGINE = InnoDB;
 -- Table `mplogistics`.`clients`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mplogistics`.`clients` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NULL,
   `company_id` INT NOT NULL,
   PRIMARY KEY (`id`, `company_id`),
@@ -48,7 +48,7 @@ CREATE INDEX `fk_clients_companies_idx` ON `mplogistics`.`clients` (`company_id`
 -- Table `mplogistics`.`vehicles`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mplogistics`.`vehicles` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `model` VARCHAR(45) NULL,
   `serial_number` VARCHAR(45) NULL,
   `company_id` INT NOT NULL,
@@ -67,7 +67,7 @@ CREATE INDEX `fk_vehicles_companies1_idx` ON `mplogistics`.`vehicles` (`company_
 -- Table `mplogistics`.`job_titles`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mplogistics`.`job_titles` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `title` VARCHAR(45) NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
@@ -77,7 +77,7 @@ ENGINE = InnoDB;
 -- Table `mplogistics`.`employees`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mplogistics`.`employees` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NULL,
   `company_id` INT NOT NULL,
   `job_title_id` INT NOT NULL,
@@ -103,7 +103,7 @@ CREATE INDEX `fk_employees_job_titles1_idx` ON `mplogistics`.`employees` (`job_t
 -- Table `mplogistics`.`qualifications`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mplogistics`.`qualifications` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `type` VARCHAR(45) NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
@@ -113,7 +113,7 @@ ENGINE = InnoDB;
 -- Table `mplogistics`.`freights`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mplogistics`.`freights` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `from_address` VARCHAR(150) NULL,
   `to_address` VARCHAR(150) NULL,
   `departure_date` DATE NULL,
@@ -127,7 +127,7 @@ ENGINE = InnoDB;
 -- Table `mplogistics`.`parcels`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mplogistics`.`parcels` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `item` VARCHAR(45) NULL,
   `weight` DOUBLE NULL,
   `freight_id` INT NOT NULL,
@@ -146,7 +146,7 @@ CREATE INDEX `fk_parcels_freights1_idx` ON `mplogistics`.`parcels` (`freight_id`
 -- Table `mplogistics`.`passengers`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mplogistics`.`passengers` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `first_name` VARCHAR(45) NULL,
   `last_name` VARCHAR(45) NULL,
   `ssn` VARCHAR(45) NULL,
