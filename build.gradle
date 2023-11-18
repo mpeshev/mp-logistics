@@ -1,3 +1,5 @@
+
+
 plugins {
     id "groovy" 
     id "org.grails.grails-web" 
@@ -11,7 +13,7 @@ plugins {
 }
 
 version "0.1"
-group = "mo.logistics"
+group = "mp.logistics"
 
 repositories {
     mavenCentral()
@@ -44,7 +46,7 @@ dependencies {
     implementation("org.grails.plugins:gsp")
     implementation("org.grails.plugins:hibernate5")
     implementation("org.grails.plugins:scaffolding")
-//    implementation("org.grails.plugins:database-reverse-engineer:4.0.0")
+    
     implementation("org.hibernate:hibernate-core:5.6.15.Final")
     implementation("org.springframework.boot:spring-boot-autoconfigure")
     implementation("org.springframework.boot:spring-boot-starter")
@@ -53,7 +55,6 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-tomcat")
     implementation("org.springframework.boot:spring-boot-starter-validation")
     compileOnly("io.micronaut:micronaut-inject-groovy")
-//    compile("org.grails.plugins:database-reverse-engineer:4.0.0")
     console("org.grails:grails-console")
     runtimeOnly("com.bertramlabs.plugins:asset-pipeline-grails:4.3.0")
     runtimeOnly("com.h2database:h2")
